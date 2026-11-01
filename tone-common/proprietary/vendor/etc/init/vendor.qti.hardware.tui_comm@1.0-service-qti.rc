@@ -1,4 +1,6 @@
 service tui_comm-1-0 /vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
+    # DORA21: preload legacy HIDL compatibility symbols
+    setenv LD_PRELOAD /vendor/lib64/libhidlbase_shim.so
     class hal
     user system
     group system drmrpc 
