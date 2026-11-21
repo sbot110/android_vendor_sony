@@ -1,0 +1,117 @@
+// LOS22.2: architecture-correct Sony legacy prebuilts
+// Keep ARM32 and ARM64 variants in their respective lib directories.
+
+cc_prebuilt_library_shared {
+    name: "sony_dora_legacy_display_color",
+    stem: "vendor.display.color@1.0",
+    compile_multilib: "both",
+    check_elf_files: false,
+    strip: { none: true },
+    product_specific: true,
+    target: {
+        android_arm: {
+            srcs: ["product/lib/vendor.display.color@1.0.so"],
+        },
+        android_arm64: {
+            srcs: ["product/lib64/vendor.display.color@1.0.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "sony_dora_legacy_display_postproc",
+    stem: "vendor.display.postproc@1.0",
+    compile_multilib: "both",
+    check_elf_files: false,
+    strip: { none: true },
+    product_specific: true,
+    target: {
+        android_arm: {
+            srcs: ["product/lib/vendor.display.postproc@1.0.so"],
+        },
+        android_arm64: {
+            srcs: ["product/lib64/vendor.display.postproc@1.0.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "sony_dora_legacy_qdutils_disp",
+    stem: "vendor.qti.hardware.qdutils_disp@1.0",
+    compile_multilib: "both",
+    check_elf_files: false,
+    strip: { none: true },
+    product_specific: true,
+    target: {
+        android_arm: {
+            srcs: ["product/lib/vendor.qti.hardware.qdutils_disp@1.0.so"],
+        },
+        android_arm64: {
+            srcs: ["product/lib64/vendor.qti.hardware.qdutils_disp@1.0.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "sony_dora_legacy_tui_comm",
+    stem: "vendor.qti.hardware.tui_comm@1.0",
+    compile_multilib: "both",
+    check_elf_files: false,
+    strip: { none: true },
+    target: {
+        android_arm: {
+            srcs: ["lib/vendor.qti.hardware.tui_comm@1.0.so"],
+        },
+        android_arm64: {
+            srcs: ["lib64/vendor.qti.hardware.tui_comm@1.0.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "sony_dora_legacy_mmosal",
+    stem: "libmmosal",
+    compile_multilib: "both",
+    check_elf_files: false,
+    strip: { none: true },
+    target: {
+        android_arm: {
+            srcs: ["system/lib/libmmosal.so"],
+        },
+        android_arm64: {
+            srcs: ["system/lib64/libmmosal.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "sony_dora_legacy_wfdclient",
+    stem: "libwfdclient",
+    compile_multilib: "both",
+    check_elf_files: false,
+    strip: { none: true },
+    target: {
+        android_arm: {
+            srcs: ["system/lib/libwfdclient.so"],
+        },
+        android_arm64: {
+            srcs: ["system/lib64/libwfdclient.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "sony_dora_legacy_wfdnative",
+    stem: "libwfdnative",
+    compile_multilib: "both",
+    check_elf_files: false,
+    strip: { none: true },
+    target: {
+        android_arm: {
+            srcs: ["system/lib/libwfdnative.so"],
+        },
+        android_arm64: {
+            srcs: ["system/lib64/libwfdnative.so"],
+        },
+    },
+}
